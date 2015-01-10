@@ -1,0 +1,17 @@
+########################
+# CS3217 Problem Set 1 #
+########################
+
+# Name: 
+# Matric No:
+# Tutor:
+
+###################################
+# Problem 1: Collections in Swift #
+###################################
+
+Question:
+Dictionary keys must conform to the Hashable protocol. Why is this necessary?
+
+Answer:
+Your Answer here
