@@ -15,7 +15,7 @@ enum StackError: Error {
  - Date: 2017
  */
 struct Stack<T> {
-    var stackArray = Array<T>();
+    private var stackArray = Array<T>();
     /// Adds an element to the top of the stack.
     /// - Parameter item: The element to be added to the stack
     mutating func push(_ item: T) {
