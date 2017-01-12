@@ -2,8 +2,8 @@
 # CS3217 Problem Set 1 #
 ########################
 
-# Name: 
-# Matric No:
+# Name: Yuan Yuchuan
+# Matric No: A0092390E
 # Tutor:
 
 ###################################
@@ -14,4 +14,11 @@ Question:
 Dictionary keys must conform to the Hashable protocol. Why is this necessary?
 
 Answer:
-Your Answer here
+Because the underlying implementation of Dictionary is a hash table, and as such keys have to correspond to entries in the hash table in some predictable way.
+
+Having Dictionary keys conform to the hashable protocol has two components:
+1. possessing an Integer .hashValue property
+2. conforming to the Equatable protocol
+
+The first allows for the key to correspond to a numbered offset in the hash table (subject to modulus and other transformations)
+The second allows for keys to be compared and the correct value to be retrieved from the hash table, as well as for collision detection and resolution.
