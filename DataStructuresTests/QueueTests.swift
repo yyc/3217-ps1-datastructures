@@ -26,8 +26,8 @@ class QueueTests : XCTestCase {
         try XCTAssertThrowsError(queue.dequeue(), "The queue should produce an error!")
         queue.enqueue("1")
         queue.enqueue("2")
-        try XCTAssertEqual(queue.dequeue(), "1", "The item is not peeking correctly!")
-        try XCTAssertEqual(queue.dequeue(), "1", "The item is not peeking correctly!")
+        try XCTAssertEqual(queue.peek(), "1", "The item is not peeking correctly!")
+        try XCTAssertEqual(queue.peek(), "1", "The item is not peeking correctly!")
     }
 
     func testCount() {
@@ -62,5 +62,8 @@ class QueueTests : XCTestCase {
         queue.enqueue("1")
         queue.enqueue("2")
         XCTAssertEqual(queue.toArray(), ["1","2"], "toArray is not functioning correctly!")
+        try! queue.dequeue()
+        queue.enqueue("3")
+        XCTAssertEqual(queue.toArray(), ["2","3"], "toArray is not functioning correctly!")
     }
 }
