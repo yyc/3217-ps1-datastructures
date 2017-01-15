@@ -34,6 +34,7 @@ struct Queue<T> {
         if(head == tail){
             throw QueueError.emptyQueue
         }
+        
         let value = queueArray[head]
         head = head + 1
         return value
@@ -72,6 +73,7 @@ struct Queue<T> {
         if(self.isEmpty){
             return Array<T>()
         }
+        
         return Array(queueArray[Range(head..<tail)])
     }
 }

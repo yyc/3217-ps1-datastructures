@@ -31,13 +31,16 @@ struct BreadthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorPr
         if(queue.isEmpty){
             return nil
         }
+        
         let key = try! queue.dequeue()
+        
         for neighbour in graph[key]!{
             if !set.contains(neighbour){
                 queue.enqueue(neighbour)
                 set.insert(neighbour)
             }
         }
+        
         return key
     }
 }

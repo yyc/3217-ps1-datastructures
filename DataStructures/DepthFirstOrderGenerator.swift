@@ -36,17 +36,21 @@ struct DepthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorProt
         if(stack.isEmpty){
             return nil
         }
+        
         let key = try! stack.pop()
+        
         if set.contains(key){
             return next()
         }
         set.insert(key)
+        
         for neighbour in graph[key]!.reversed(){
             if(!set.contains(neighbour)){
                 // Add node to stack if it was not previously traversed
                 stack.push(neighbour)
             }
         }
+        
         return key
     }
 }

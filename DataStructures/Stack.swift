@@ -29,6 +29,7 @@ struct Stack<T> {
         if self.isEmpty{
             throw StackError.emptyStack
         }
+        
         return stackArray.popLast()!
     }
 
@@ -39,6 +40,7 @@ struct Stack<T> {
         if self.isEmpty{
             throw StackError.emptyStack
         }
+        
         return stackArray.last!
     }
 
