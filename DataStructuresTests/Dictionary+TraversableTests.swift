@@ -18,6 +18,7 @@ class Dictionary_TraversableTests : XCTestCase {
         XCTAssertEqual(bfsGenerator.next(), "D", "Fifth node of bfs for \(graphFileName) from \(nodeA) should be 'D'!")
         XCTAssertEqual(bfsGenerator.next(), "F", "Sixth node of bfs for \(graphFileName) from \(nodeA) should be 'F'!")
         XCTAssertEqual(bfsGenerator.next(), "G", "Seventh node of bfs for \(graphFileName) from \(nodeA) should be 'G'!")
+        XCTAssertNil(bfsGenerator.next(), "Calling next() after the iterator empties should produce nil!")
         
         let bfsNodes = graph.nodesSequenceInBreadthFirstOrderFromNode(nodeA)
         XCTAssertEqual(bfsNodes, ["A", "B", "C", "E", "D", "F", "G"],
@@ -31,6 +32,7 @@ class Dictionary_TraversableTests : XCTestCase {
         XCTAssertEqual(dfsGenerator.next(), "E", "Fifth node of dfs for \(graphFileName) from \(nodeA) should be 'E'!")
         XCTAssertEqual(dfsGenerator.next(), "C", "Sixth node of dfs for \(graphFileName) from \(nodeA) should be 'C'!")
         XCTAssertEqual(dfsGenerator.next(), "G", "Seventh node of dfs for \(graphFileName) from \(nodeA) should be 'G'!")
+        XCTAssertNil(bfsGenerator.next(), "Calling next() after the iterator empties should produce nil!")
         
         let dfsNodes = graph.nodesSequenceInDepthFirstOrderFromNode(nodeA)
         XCTAssertEqual(dfsNodes, ["A", "B", "D", "F", "E", "C", "G"],
