@@ -1,5 +1,6 @@
 // Copyright (c) 2017 NUS CS3217. All rights reserved.
 
+
 /**
  A generator that returns the nodes in the graph in breadth-first search order,
  starting at the given node.
@@ -19,8 +20,12 @@ struct BreadthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorPr
     ///   - start: The start node.
     init(graph: Dictionary<Key, Value>, start: Key) {
         self.graph = graph
-        queue.enqueue(start)
-        set.insert(start)
+        
+        // We only try to do DFS if the start exists, otherwise we just leave the queue empty
+        if graph.index(forKey: start) != nil{
+            queue.enqueue(start)
+            set.insert(start)
+        }
     }
 
     func makeIterator() -> BreadthFirstOrderGenerator<Key, Value> {
@@ -34,10 +39,12 @@ struct BreadthFirstOrderGenerator<Key: Hashable, Value: Collection> : IteratorPr
         
         let key = try! queue.dequeue()
         
-        for neighbour in graph[key]!{
-            if !set.contains(neighbour){
-                queue.enqueue(neighbour)
-                set.insert(neighbour)
+        if graph[key] != nil {
+            for neighbour in graph[key]!{
+                if !set.contains(neighbour){
+                    queue.enqueue(neighbour)
+                    set.insert(neighbour)
+                }
             }
         }
         
