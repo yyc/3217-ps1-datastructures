@@ -33,7 +33,15 @@ class DepthFirstOrderGeneratorTests : XCTestCase {
                        ["A", "B", "D", "E", "F", "G", "H", "C"],
                        "The BFS for \(graphFileName) is wrong!")
     }
-    
+
+    // Additional graph missing adjacency lists for some nodes
+    func testIncompleteGraph() {
+        let graphFileName = "graph_missing"
+        XCTAssertEqual(getResultantNodesForGraph(graphFileName, startNode: "A"),
+                       ["A", "C", "B", "D"],
+                       "The BFS for \(graphFileName) is wrong!")
+    }
+
     
     private func getResultantNodesForGraph(_ fileName: String, startNode: String) -> [String] {
         // You do not need to modify this function.

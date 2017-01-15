@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1380D1691E2B99A900B6AF1D /* graph_additional.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1380D1681E2B99A900B6AF1D /* graph_additional.plist */; };
 		13B934D31E2BA06600890136 /* graph_additional.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1380D1681E2B99A900B6AF1D /* graph_additional.plist */; };
+		13B934D71E2BB79500890136 /* graph_missing.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13B934D61E2BB79500890136 /* graph_missing.plist */; };
+		13B934D81E2BB80300890136 /* graph_missing.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13B934D61E2BB79500890136 /* graph_missing.plist */; };
 		412A0AA91A5FDEB5002B6B25 /* Dictionary+TraversableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A0AA81A5FDEB5002B6B25 /* Dictionary+TraversableTests.swift */; };
 		412A0AAB1A5FDFAA002B6B25 /* DepthFirstOrderGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A0AAA1A5FDFAA002B6B25 /* DepthFirstOrderGeneratorTests.swift */; };
 		413DC05F1A5F62C300CC4AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DC05E1A5F62C300CC4AC3 /* AppDelegate.swift */; };
@@ -41,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		1380D1681E2B99A900B6AF1D /* graph_additional.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = graph_additional.plist; sourceTree = "<group>"; };
+		13B934D61E2BB79500890136 /* graph_missing.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = graph_missing.plist; sourceTree = "<group>"; };
 		412A0AA81A5FDEB5002B6B25 /* Dictionary+TraversableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+TraversableTests.swift"; sourceTree = "<group>"; };
 		412A0AAA1A5FDFAA002B6B25 /* DepthFirstOrderGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthFirstOrderGeneratorTests.swift; sourceTree = "<group>"; };
 		413DC0591A5F62C300CC4AC3 /* DataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +151,7 @@
 				6DD36A351A60E90800746BF6 /* graph_linkedlist.plist */,
 				413DC0731A5F62C300CC4AC3 /* Info.plist */,
 				1380D1681E2B99A900B6AF1D /* graph_additional.plist */,
+				13B934D61E2BB79500890136 /* graph_missing.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -237,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B934D81E2BB80300890136 /* graph_missing.plist in Resources */,
 				13B934D31E2BA06600890136 /* graph_additional.plist in Resources */,
 				765CFB9A1C37DE7600FA2E0E /* graph_cycle.plist in Resources */,
 				765CFB9B1C37DE7600FA2E0E /* graph_example.plist in Resources */,
@@ -251,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B934D71E2BB79500890136 /* graph_missing.plist in Resources */,
 				1380D1691E2B99A900B6AF1D /* graph_additional.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
