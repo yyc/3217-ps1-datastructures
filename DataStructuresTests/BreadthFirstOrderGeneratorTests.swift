@@ -26,12 +26,14 @@ class BreadthFirstOrderGeneratorTests : XCTestCase {
             "The BFS for \(graphFileName) is wrong!")
     }
     
+    // Additional graph with cycles and reflexive nodes
     func testAdditionalGraph() {
         let graphFileName = "graph_additional"
         XCTAssertEqual(getResultantNodesForGraph(graphFileName, startNode: "A"),
                        ["A", "B", "C", "D", "E", "G", "F", "H"],
                        "The BFS for \(graphFileName) is wrong!")
     }
+    
     private func getResultantNodesForGraph(_ fileName: String, startNode: String) -> [String] {
         // You do not need to modify this function.
         let path = Bundle.main.path(forResource: fileName, ofType: "plist")!
